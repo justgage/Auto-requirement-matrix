@@ -1,0 +1,49 @@
+body {
+   width:800px;
+}
+
+table {
+   border-collapse: collapse;
+   margin-right: 140px;
+   margin-top: 50px;
+   /* width:1000px; */
+}
+
+
+.vertical-text {
+   transform: rotate(-90deg);
+   transform-origin: left bottom 0;
+   float:left;
+}
+
+
+th.rotate {
+   /* Something you can count on */
+   height: 140px;
+   white-space: nowrap;
+}
+
+th.rotate > div {
+   transform: 
+      translate(32px, 48px)
+      rotate(315deg);
+   width: 43px;
+}
+th.rotate > div > span {
+   border-bottom: 1px solid #ccc;
+   padding: 0px 11px;
+   letter-spacing: 2px;
+}
+
+td {
+   border: 1px solid #ccc;
+   text-align: center;
+}
+
+.req-name {
+   width: 80px;
+   font-weight:bold;
+}
+
+
+

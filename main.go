@@ -13,28 +13,29 @@ type DesignEntity struct {
 }
 
 type DesignDoc struct {
-	Reqs []string       `yaml:"Reqirements"`
-	DEs  []DesignEntity `yaml:"Design Entities"`
+	Reqs        []string       `yaml:"Reqirements"`
+	Controllers []DesignEntity `yaml:"Controllers"`
+	Models      []DesignEntity `yaml:"Models"`
 }
 
 /*
 This will convert a slice of design to an HTML Table
 */
-func toHtml(entitys []DesignEntity, reqs []string) {
+func toTable(entitys []DesignEntity, reqs []string) {
 
 	fmt.Println("<table>")
 
-	fmt.Print("<tr><th></th>")
+	fmt.Print(`<tr><th class="req-name"></th>`)
 
 	for _, entity := range entitys {
-		fmt.Printf("<th>%s</th>", entity.Name)
+		fmt.Printf(`<th class="rotate"><div><span>%s</span></div></th>`, entity.Name)
 	}
 	fmt.Print("</tr>\n")
 
 	// each reqirement row
 	for _, req_name := range reqs {
 		fmt.Print("<tr>")
-		fmt.Printf("<td>%s</td>", req_name)
+		fmt.Printf(`<td class="req-name">%s</td>`, req_name)
 
 		// each reqirement in a design entity
 		for _, entity := range entitys {
@@ -59,6 +60,12 @@ func toHtml(entitys []DesignEntity, reqs []string) {
 	}
 
 	fmt.Println("</table>")
+	fmt.Println(`<p style="page-break-after:always;"></p>
+	`)
+}
+
+func cssRender(css []byte) {
+	fmt.Printf("<style>\n%s\n</style>", css)
 }
 
 func main() {
@@ -67,18 +74,23 @@ func main() {
 		panic("Please enter a filename!")
 	}
 
-	y, err := ioutil.ReadFile(os.Args[1])
+	yaml_stuff, err := ioutil.ReadFile(os.Args[1])
+	css, err := ioutil.ReadFile("style.css")
+
+	cssRender(css)
+
 	if err != nil {
 		panic(err)
 	}
 
 	var doc DesignDoc
 
-	err = yaml.Unmarshal([]byte(y), &doc)
+	err = yaml.Unmarshal([]byte(yaml_stuff), &doc)
 
 	if err != nil {
 		fmt.Println(err)
 	} else {
-		toHtml(doc.DEs, doc.Reqs)
+		toTable(doc.Controllers, doc.Reqs)
+		toTable(doc.Models, doc.Reqs)
 	}
 }
