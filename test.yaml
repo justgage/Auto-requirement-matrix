@@ -1,27 +1,241 @@
 ---
 Reqirements: 
-- req1
-- req2
-- req3
+- ALL-001
+- ALL-002
+- TUT-001
+- TUT-002
+- TUT-003
+- TUT-004
+- TUT-005
+- TUT-006
+- TUT-007
+- TUT-008
+- TUT-009
+- TUT-010
+- TUT-011
+- TUT-012
+- TUT-013
+- TUT-014
+- TUT-015
+- TUT-016
+- TUT-017
+- TUT-018
+- TUT-019
+- TUT-020
+- STU-001
+- STU-002
+- STU-003
+- STU-004
+- STU-005
+- STU-006
+- STU-007
+- STU-008
+- STU-009
+- STU-010
+- STU-011
+- STU-012
+- STU-013
+- STU-014
+- STU-015
+- STU-016
+- STU-017
+- STU-018
+- STU-019
+- STU-020
+- STU-021
+- STU-022
+- STU-023
+- STU-024
+- STU-025
+- ADM-001
+- ADM-002
+- ADM-003
+- ADM-004
+- ADM-005
+- ADM-006
+- ADM-007
+- ADM-008
+- ADM-009
+- ADM-010
+- ADM-011
+- ADM-012
+- ADM-013
+- ADM-014
+- ADM-015
+- ADM-016
+- ADM-017
+- ADM-018
+- ADM-019
+- ADM-020
+- SYS-001
+- SYS-002
+- SYS-003
+- SYS-004
+- SYS-005
+- SYS-006
+- SYS-007
+- SYS-008
+- SYS-009
+- SYS-010
+- SYS-011
+- SYS-012
+- SYS-013
+- SYS-014
 
 Design Entities: 
-- name: Calendar
+
+- name: Jenabar Adapter
   description: This is a calendar entitiy
   reqirements:
-   - req1
-   - req2
-   - req3
+   - STU-001
+   - TUT-012
 
-- name: User
+- name: Location Controller
+  description:
   reqirements:
-  - req3
+   - TUT-010
 
-- name: Calendar
+- name: Announcements Controller
+  description: 
   reqirements:
-  - req1
-  - req2
-  - req3
+   - TUT-003
 
-- name: User
+- name: Tutor Controller
+  description: 
   reqirements:
-  - req3
+   - TUT-001
+   - TUT-013
+
+- name: Review Controller
+  description: 
+  reqirements:
+   - TUT-015
+
+- name: Appointments Controller
+  description: 
+  reqirements:
+   - TUT-002
+   - TUT-005
+   - TUT-006
+   - TUT-008
+   - TUT-009
+   - TUT-011
+   - maybeTUT-014
+   - TUT-016
+   - TUT-017
+   - TUT-018
+
+- name: Video Controller
+  description: 
+  reqirements:
+   - TUT-019
+
+- name: Materials Controller
+  description: 
+  reqirements:
+   - TUT-017
+
+- name: Course Controller
+  description: 
+  reqirements:
+
+- name: Notification Library
+  description: 
+  reqirements:
+
+- name: Student Library
+  description: 
+  reqirements:
+   - TUT-012
+   - STU-001
+
+- name: Admin Controller
+  description:
+  reqirements:
+
+#############################
+#          MODELS           #
+#############################
+
+- name: Location Model
+  description:
+  reqirements:
+
+
+- name: Announcements Model
+  description: 
+  reqirements:
+
+
+- name: Tutor Model
+  description: 
+  reqirements:
+
+
+- name: Review Model
+  description: 
+  reqirements:
+
+
+- name: Appointments Model
+  description: 
+  reqirements:
+
+
+- name: Video Model
+  description: 
+  reqirements:
+
+
+- name: Materials Model
+  description: 
+  reqirements:
+
+
+- name: Course Model
+  description: 
+  reqirements:
+
+
+- name: Admin Model
+  description:
+  reqirements:
+
+
+- name: Location Model
+  description:
+  reqirements:
+
+
+- name: Announcements Model
+  description: 
+  reqirements:
+
+- name: Tutor Model
+  description: 
+  reqirements:
+
+- name: Review Model
+  description: 
+  reqirements:
+
+- name: Appointments Model
+  description: 
+  reqirements:
+
+- name: Video Model
+  description: 
+  reqirements:
+
+- name: Materials Model
+  description: 
+  reqirements:
+
+- name: Course Model
+  description: 
+  reqirements:
+
+- name: Admin Model
+  description:
+  reqirements:
+
