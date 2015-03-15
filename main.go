@@ -72,7 +72,7 @@ func toMarkdownTable(entitys []DesignEntity, reqs []string) {
 	for _, entity := range entitys {
 		fmt.Printf("  %s  |", entity.Name)
 	}
-	fmt.Print("\n||")
+	fmt.Print("\n|------|")
 
 	for _ = range entitys {
 		fmt.Printf("-----|")

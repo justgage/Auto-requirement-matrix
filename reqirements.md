@@ -1,6 +1,6 @@
 
 ||  Location Controller  |  Announcements Controller  |  Tutor Controller  |  Review Controller  |  Appointments Controller  |  Video Controller  |  Materials Controller  |  Course Controller  |  Student Controller  |  Admin Controller  |  Jenabar Adapter  |  Notification Library  |
-||-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+|------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 | ALL-001 |   |   |   |   |   |   |   |   |   |   |   |   |
 | ALL-002 |   |   |   |   |   |   |   |   |   |   |   |   |
 | TUT-001 |   |   | x |   |   |   |   |   |   |   |   |   |
@@ -85,7 +85,7 @@
 
 
 ||  Location Model  |  Announcements Model  |  Tutor Model  |  Review Model  |  Appointments Model  |  Video Model  |  Materials Model  |  Course Model  |  Admin Model  |  Student Model  |
-||-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+|------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 | ALL-001 |   |   |   |   |   |   |   |   |   |   |
 | ALL-002 |   |   |   |   |   |   |   |   |   |   |
 | TUT-001 |   |   |   |   |   |   |   |   |   |   |
