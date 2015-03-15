@@ -64,6 +64,49 @@ func toTable(entitys []DesignEntity, reqs []string) {
 	`)
 }
 
+func toMarkdownTable(entitys []DesignEntity, reqs []string) {
+
+	fmt.Println()
+	fmt.Print("||")
+
+	for _, entity := range entitys {
+		fmt.Printf("  %s  |", entity.Name)
+	}
+	fmt.Print("\n||")
+
+	for _ = range entitys {
+		fmt.Printf("-----|")
+	}
+
+	fmt.Print("\n")
+
+	// each reqirement row
+	for _, req_name := range reqs {
+		fmt.Printf("| %s |", req_name)
+
+		// each reqirement in a design entity
+		for _, entity := range entitys {
+
+			has_it := false
+
+			for _, dreq := range entity.Requirements {
+				if req_name == dreq {
+					has_it = true
+					break
+				}
+			}
+
+			if has_it {
+				fmt.Printf(" x |")
+			} else {
+				fmt.Printf("   |")
+			}
+		}
+		fmt.Printf("\n")
+	}
+	fmt.Print("\n")
+}
+
 func cssRender(css []byte) {
 	fmt.Printf("<style>\n%s\n</style>", css)
 }
@@ -71,26 +114,40 @@ func cssRender(css []byte) {
 func main() {
 
 	if len(os.Args) == 1 {
-		panic("Please enter a filename!")
-	}
-
-	yaml_stuff, err := ioutil.ReadFile(os.Args[1])
-	css, err := ioutil.ReadFile("style.css")
-
-	cssRender(css)
-
-	if err != nil {
-		panic(err)
-	}
-
-	var doc DesignDoc
-
-	err = yaml.Unmarshal([]byte(yaml_stuff), &doc)
-
-	if err != nil {
-		fmt.Println(err)
+		fmt.Println("Please enter a filename!")
 	} else {
-		toTable(doc.Controllers, doc.Reqs)
-		toTable(doc.Models, doc.Reqs)
+
+		yaml_stuff, err := ioutil.ReadFile(os.Args[1])
+		typeoffile := os.Args[2]
+
+		if err != nil {
+			panic(err)
+		}
+
+		var doc DesignDoc
+
+		err = yaml.Unmarshal([]byte(yaml_stuff), &doc)
+
+		if err != nil {
+			fmt.Println(err)
+
+		} else { // no error reading the yaml
+
+			if typeoffile == "markdown" {
+				toMarkdownTable(doc.Controllers, doc.Reqs)
+				toMarkdownTable(doc.Models, doc.Reqs)
+
+			} else { // default to HTML
+				css, err := ioutil.ReadFile("style.css")
+
+				if err != nil {
+					panic(err)
+				}
+
+				cssRender(css)
+				toTable(doc.Controllers, doc.Reqs)
+				toTable(doc.Models, doc.Reqs)
+			}
+		}
 	}
 }
