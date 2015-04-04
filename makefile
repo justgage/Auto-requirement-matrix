@@ -1,6 +1,6 @@
 main: html markdown csv
 html: it
-	./reqirement-matrix new-req.yaml html > reqirements.html 
+	./reqirement-matrix new-req.yaml html > index.html 
 markdown: it
 	./reqirement-matrix new-req.yaml markdown > reqirements.md 
 csv: it
