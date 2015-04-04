@@ -1,10 +1,10 @@
 main: html markdown csv
 html: it
-	./reqirement-matrix document.yaml html > reqirements.html 
+	./reqirement-matrix new-req.yaml html > reqirements.html 
 markdown: it
-	./reqirement-matrix document.yaml markdown > reqirements.md 
+	./reqirement-matrix new-req.yaml markdown > reqirements.md 
 csv: it
-	./reqirement-matrix document.yaml csv > reqirements.csv 
+	./reqirement-matrix new-req.yaml csv > reqirements.csv 
 it:
 	go build
 view:

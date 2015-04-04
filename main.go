@@ -5,23 +5,32 @@ import (
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"os"
+	"sort"
 )
 
 type DesignEntity struct {
 	Name         string   `yaml:"name"` // Affects YAML field names too.
-	Requirements []string `yaml:"reqirements"`
+	Requirements []string `yaml:"requirements"`
+}
+
+type DesignEntitys []DesignEntity
+
+func (a DesignEntitys) Len() int { return len(a) }
+
+func (slice DesignEntitys) Less(i, j int) bool {
+	return slice[i].Name < slice[j].Name
+}
+
+func (slice DesignEntitys) Swap(i, j int) {
+	slice[i], slice[j] = slice[j], slice[i]
 }
 
 type DesignDoc struct {
-	Reqs        []string       `yaml:"Reqirements"`
+	Reqs        []string       `yaml:"Requirements"`
 	Controllers []DesignEntity `yaml:"Controllers"`
 	Models      []DesignEntity `yaml:"Models"`
 	Views       []DesignEntity `yaml:"Views"`
 }
-
-// func splitReqs(reqs []string) {
-// reqs
-// }
 
 func toCSVTable(title string, entitys []DesignEntity, reqs []string) {
 
@@ -74,7 +83,15 @@ func toHTMLTable(title string, entitys []DesignEntity, reqs []string) {
 	fmt.Print(`<tr><th class="req-name"></th>`)
 
 	for _, entity := range entitys {
-		fmt.Printf(`<th class="rotate"><div><span>%s</span></div></th>`, entity.Name)
+		var badClass string
+
+		if len(entity.Requirements) == 0 {
+			badClass = " bad"
+		} else {
+			badClass = ""
+		}
+
+		fmt.Printf(`<th class="rotate%s"><div><span>%s (%d)</span></div></th>`, badClass, entity.Name, len(entity.Requirements))
 	}
 	fmt.Print("</tr>\n")
 
@@ -179,8 +196,13 @@ func main() {
 			fmt.Println(err)
 
 		} else { // no error reading the yaml
+			sort.Sort(DesignEntitys(doc.Controllers))
+			sort.Sort(DesignEntitys(doc.Models))
+			sort.Sort(DesignEntitys(doc.Views))
+			// sort.Sort(doc.Reqs)
 
 			if typeOfFile == "markdown" {
+
 				toMarkdownTable("Controllers", doc.Controllers, doc.Reqs)
 				toMarkdownTable("Models", doc.Models, doc.Reqs)
 				toMarkdownTable("Views", doc.Views, doc.Reqs)
