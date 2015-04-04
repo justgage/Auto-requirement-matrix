@@ -8,7 +8,7 @@ csv: it
 it:
 	go build
 view:
-	chromium reqirements.html
+	chromium index.html
 watch:
 	watch make
 
