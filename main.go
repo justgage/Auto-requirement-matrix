@@ -115,7 +115,7 @@ func toHTMLTable(title string, entitys []DesignEntity, reqs map[string]map[strin
 	for _, req_name := range sortedKeys(reqs) {
 		fmt.Print("<tr>")
 		if DEV {
-			fmt.Printf(`<td class="req-name"><a href="#%s">%s</a></td>`, req_name, req_name)
+			fmt.Printf(`<td class="req-name"><a title="%s" href="#%s">%s</a></td>`, reqs[req_name]["description"], req_name, req_name)
 		} else {
 			fmt.Printf(`<td class="req-name">%s</td>`, req_name)
 		}
