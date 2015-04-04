@@ -8,6 +8,8 @@ import (
 	"sort"
 )
 
+const DEV = true
+
 type DesignEntity struct {
 	Name         string   `yaml:"name"` // Affects YAML field names too.
 	Requirements []string `yaml:"requirements"`
@@ -26,13 +28,13 @@ func (slice DesignEntitys) Swap(i, j int) {
 }
 
 type DesignDoc struct {
-	Reqs        []string       `yaml:"Requirements"`
-	Controllers []DesignEntity `yaml:"Controllers"`
-	Models      []DesignEntity `yaml:"Models"`
-	Views       []DesignEntity `yaml:"Views"`
+	Reqs        map[string]map[string]string `yaml:"Requirements"`
+	Controllers []DesignEntity               `yaml:"Controllers"`
+	Models      []DesignEntity               `yaml:"Models"`
+	Views       []DesignEntity               `yaml:"Views"`
 }
 
-func toCSVTable(title string, entitys []DesignEntity, reqs []string) {
+func toCSVTable(title string, entitys []DesignEntity, reqs map[string]map[string]string) {
 
 	fmt.Println("" + title + "")
 	fmt.Println("")
@@ -44,7 +46,7 @@ func toCSVTable(title string, entitys []DesignEntity, reqs []string) {
 	fmt.Println()
 
 	// each reqirement row
-	for _, req_name := range reqs {
+	for req_name := range reqs {
 		fmt.Printf(`%s,`, req_name)
 
 		// each reqirement in a design entity
@@ -72,10 +74,20 @@ func toCSVTable(title string, entitys []DesignEntity, reqs []string) {
 	fmt.Println("")
 }
 
+func sortedKeys(m map[string]map[string]string) []string {
+	var keys []string
+	for k := range m {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+
+	return keys
+}
+
 /*
 This will convert a slice of design to an HTML Table
 */
-func toHTMLTable(title string, entitys []DesignEntity, reqs []string) {
+func toHTMLTable(title string, entitys []DesignEntity, reqs map[string]map[string]string) {
 
 	fmt.Println("<h2>" + title + "<h2>")
 	fmt.Println("<table>")
@@ -91,14 +103,22 @@ func toHTMLTable(title string, entitys []DesignEntity, reqs []string) {
 			badClass = ""
 		}
 
-		fmt.Printf(`<th class="rotate%s"><div><span>%s (%d)</span></div></th>`, badClass, entity.Name, len(entity.Requirements))
+		if DEV {
+			fmt.Printf(`<th class="rotate%s"><div><span>%s (%d)</span></div></th>`, badClass, entity.Name, len(entity.Requirements))
+		} else {
+			fmt.Printf(`<th class="rotate"><div><span>%s</span></div></th>`, entity.Name)
+		}
 	}
 	fmt.Print("</tr>\n")
 
 	// each reqirement row
-	for _, req_name := range reqs {
+	for _, req_name := range sortedKeys(reqs) {
 		fmt.Print("<tr>")
-		fmt.Printf(`<td class="req-name">%s</td>`, req_name)
+		if DEV {
+			fmt.Printf(`<td class="req-name"><a href="#%s">%s</a></td>`, req_name, req_name)
+		} else {
+			fmt.Printf(`<td class="req-name">%s</td>`, req_name)
+		}
 
 		// each reqirement in a design entity
 		for _, entity := range entitys {
@@ -123,11 +143,11 @@ func toHTMLTable(title string, entitys []DesignEntity, reqs []string) {
 	}
 
 	fmt.Println("</table>")
-	fmt.Println(`<p style="page-break-after:always;"></p>
-	`)
+	fmt.Println(`<p style="page-break-after:always;"></p>`)
+
 }
 
-func toMarkdownTable(title string, entitys []DesignEntity, reqs []string) {
+func toMarkdownTable(title string, entitys []DesignEntity, reqs map[string]map[string]string) {
 
 	fmt.Println("# " + title + "")
 	fmt.Println()
@@ -145,7 +165,7 @@ func toMarkdownTable(title string, entitys []DesignEntity, reqs []string) {
 	fmt.Print("\n")
 
 	// each reqirement row
-	for _, req_name := range reqs {
+	for req_name, _ := range reqs {
 		fmt.Printf("| %s |", req_name)
 
 		// each reqirement in a design entity
@@ -223,6 +243,15 @@ func main() {
 				toHTMLTable("Controllers", doc.Controllers, doc.Reqs)
 				toHTMLTable("Models", doc.Models, doc.Reqs)
 				toHTMLTable("Views", doc.Views, doc.Reqs)
+
+				if DEV {
+					for _, name := range sortedKeys(doc.Reqs) {
+						contents := doc.Reqs[name]
+						fmt.Printf(`<h2 id="%s">%s:</h2>`, name, name)
+						fmt.Printf(`<p><strong>description:</strong>%s</p>`, contents["description"])
+						fmt.Printf(`<p><strong>rationale:</strong>%s</p>`, contents["rationale"])
+					}
+				}
 			}
 		}
 	}
