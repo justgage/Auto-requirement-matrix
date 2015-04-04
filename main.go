@@ -247,9 +247,8 @@ func main() {
 				if DEV {
 					for _, name := range sortedKeys(doc.Reqs) {
 						contents := doc.Reqs[name]
-						fmt.Printf(`<h2 id="%s">%s:</h2>`, name, name)
-						fmt.Printf(`<p><strong>description:</strong>%s</p>`, contents["description"])
-						fmt.Printf(`<p><strong>rationale:</strong>%s</p>`, contents["rationale"])
+						fmt.Printf(`<h3 id="%s"><strong>%s</strong>: %s</h3>`, name, name, contents["description"])
+						fmt.Printf(`<p><strong>Rationale:</strong> %s</p>`, contents["rationale"])
 					}
 				}
 			}

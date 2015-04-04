@@ -703,49 +703,49 @@ Requirements:
 
    SYS-005:
      description: "TutorTrac 2.0 shall notify students when a tutoring appointment has changed.  "
-     Rationale: "Students need to be informed of any changes so that tutoring appointments are not missed.  The fastest method of notification is if TutorTrac 2.0 automatically notifies the students.  See STU-013."
+     rationale: "Students need to be informed of any changes so that tutoring appointments are not missed.  The fastest method of notification is if TutorTrac 2.0 automatically notifies the students.  See STU-013."
 
    SYS-006:
      description: "TutorTrac 2.0 shall notify tutors when a tutoring appointment has changed.  "
-     Rationale: "Tutors need to be informed of any changes so that tutoring appointments are not missed. The fastest method of notification is if TutorTrac 2.0 automatically notifies the tutors. See TUT-003."
+     rationale: "Tutors need to be informed of any changes so that tutoring appointments are not missed. The fastest method of notification is if TutorTrac 2.0 automatically notifies the tutors. See TUT-003."
 
 
    SYS-007:
      description: "TutorTrac 2.0 shall display tutoring appointment availability for each course.  "
-     Rationale: "Students need to know how many tutoring appointments are available in TutorTrac 2.0.  "
+     rationale: "Students need to know how many tutoring appointments are available in TutorTrac 2.0.  "
 
    SYS-008:
      description: "TutorTrac 2.0 shall allow students to check-in and check-out of centers that allow drop-in appointments without previously having a tutoring appointment.  "
-     Rationale: "Tutors can have drop-in appointments without the student needing to sign up beforehand. TutorTrac 2.0 needs to allow for this flexibility so tutors can still be paid for a tutoring appointment.  "
+     rationale: "Tutors can have drop-in appointments without the student needing to sign up beforehand. TutorTrac 2.0 needs to allow for this flexibility so tutors can still be paid for a tutoring appointment.  "
 
    SYS-009:
      description: "TutorTrac 2.0 shall log all key metrics.  "
-     Rationale: "Key metrics need to be recorded in order to be used in the generation of performance reports. See SYS-010."
+     rationale: "Key metrics need to be recorded in order to be used in the generation of performance reports. See SYS-010."
 
 
    SYS-010:
      description: "TutorTrac 2.0 shall use key metrics to generate performance reports.  "
-     Rationale: "Performance reports are used by BYU-Idaho in order to view how tutoring centers are used. See SYS-009."
+     rationale: "Performance reports are used by BYU-Idaho in order to view how tutoring centers are used. See SYS-009."
 
 
    SYS-011:
      description: "TutorTrac 2.0 shall limit the maximum number of hours a tutor can schedule during a week (maximum determined by admin).  "
-     Rationale: "Tutoring centers have business needs tied to weekly maximum student employee hours. TutorTrac 2.0 will save time by making sure no tutor has signed up for more than the allotted hours. See ADM-005."
+     rationale: "Tutoring centers have business needs tied to weekly maximum student employee hours. TutorTrac 2.0 will save time by making sure no tutor has signed up for more than the allotted hours. See ADM-005."
 
 
    SYS-012:
      description: "TutorTrac 2.0 shall store learning videos related to a course.  "
-     Rationale: "This is meant to be a student resource that helps them to get help with specific topics related to a course. See TUT-019, STU-021, and ADM-016."
+     rationale: "This is meant to be a student resource that helps them to get help with specific topics related to a course. See TUT-019, STU-021, and ADM-016."
 
 
    SYS-013:
      description: "TutorTrac 2.0 shall store learning videos related to a specific topic.  "
-     Rationale: "This is meant to be a student resource that helps them to get help with specific topics. See TUT-019, STU-021, and ADM-016."
+     rationale: "This is meant to be a student resource that helps them to get help with specific topics. See TUT-019, STU-021, and ADM-016."
 
 
    SYS-014:
       description: "TutorTrac 2.0 shall store tutoring appointment information."
-      Rationale: "TutorTrac 2.0 needs to be able to save created appointment information so students can sign up for appointments. It also needs this information for performance reports."
+      rationale: "TutorTrac 2.0 needs to be able to save created appointment information so students can sign up for appointments. It also needs this information for performance reports."
 
 
 
