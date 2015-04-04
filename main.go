@@ -5,30 +5,93 @@ import (
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"os"
+	"sort"
 )
 
 type DesignEntity struct {
 	Name         string   `yaml:"name"` // Affects YAML field names too.
-	Requirements []string `yaml:"reqirements"`
+	Requirements []string `yaml:"requirements"`
+}
+
+type DesignEntitys []DesignEntity
+
+func (a DesignEntitys) Len() int { return len(a) }
+
+func (slice DesignEntitys) Less(i, j int) bool {
+	return slice[i].Name < slice[j].Name
+}
+
+func (slice DesignEntitys) Swap(i, j int) {
+	slice[i], slice[j] = slice[j], slice[i]
 }
 
 type DesignDoc struct {
-	Reqs        []string       `yaml:"Reqirements"`
+	Reqs        []string       `yaml:"Requirements"`
 	Controllers []DesignEntity `yaml:"Controllers"`
 	Models      []DesignEntity `yaml:"Models"`
+	Views       []DesignEntity `yaml:"Views"`
+}
+
+func toCSVTable(title string, entitys []DesignEntity, reqs []string) {
+
+	fmt.Println("" + title + "")
+	fmt.Println("")
+
+	for _, entity := range entitys {
+		fmt.Printf(`,%s`, entity.Name)
+	}
+
+	fmt.Println()
+
+	// each reqirement row
+	for _, req_name := range reqs {
+		fmt.Printf(`%s,`, req_name)
+
+		// each reqirement in a design entity
+		for _, entity := range entitys {
+
+			has_it := false
+
+			for _, dreq := range entity.Requirements {
+				if req_name == dreq {
+					has_it = true
+					break
+				}
+			}
+
+			if has_it {
+				fmt.Printf("x,")
+			} else {
+				fmt.Printf(" ,")
+			}
+		}
+
+		fmt.Println()
+	}
+
+	fmt.Println("")
 }
 
 /*
 This will convert a slice of design to an HTML Table
 */
-func toTable(entitys []DesignEntity, reqs []string) {
+func toHTMLTable(title string, entitys []DesignEntity, reqs []string) {
 
+	fmt.Println("<h2>" + title + "<h2>")
 	fmt.Println("<table>")
 
 	fmt.Print(`<tr><th class="req-name"></th>`)
 
 	for _, entity := range entitys {
-		fmt.Printf(`<th class="rotate"><div><span>%s</span></div></th>`, entity.Name)
+		var badClass string
+
+		if len(entity.Requirements) == 0 {
+			badClass = " bad"
+		} else {
+			badClass = ""
+		}
+
+		fmt.Printf(`<th class="rotate%s"><div><span>%s (%d)</span></div></th>`, badClass, entity.Name, len(entity.Requirements))
 	}
 	fmt.Print("</tr>\n")
 
@@ -64,8 +127,9 @@ func toTable(entitys []DesignEntity, reqs []string) {
 	`)
 }
 
-func toMarkdownTable(entitys []DesignEntity, reqs []string) {
+func toMarkdownTable(title string, entitys []DesignEntity, reqs []string) {
 
+	fmt.Println("# " + title + "")
 	fmt.Println()
 	fmt.Print("||")
 
@@ -118,7 +182,7 @@ func main() {
 	} else {
 
 		yaml_stuff, err := ioutil.ReadFile(os.Args[1])
-		typeoffile := os.Args[2]
+		typeOfFile := os.Args[2]
 
 		if err != nil {
 			panic(err)
@@ -132,10 +196,21 @@ func main() {
 			fmt.Println(err)
 
 		} else { // no error reading the yaml
+			sort.Sort(DesignEntitys(doc.Controllers))
+			sort.Sort(DesignEntitys(doc.Models))
+			sort.Sort(DesignEntitys(doc.Views))
+			// sort.Sort(doc.Reqs)
 
-			if typeoffile == "markdown" {
-				toMarkdownTable(doc.Controllers, doc.Reqs)
-				toMarkdownTable(doc.Models, doc.Reqs)
+			if typeOfFile == "markdown" {
+
+				toMarkdownTable("Controllers", doc.Controllers, doc.Reqs)
+				toMarkdownTable("Models", doc.Models, doc.Reqs)
+				toMarkdownTable("Views", doc.Views, doc.Reqs)
+
+			} else if typeOfFile == "csv" {
+				toCSVTable("Controllers", doc.Controllers, doc.Reqs)
+				toCSVTable("Models", doc.Models, doc.Reqs)
+				toCSVTable("Views", doc.Views, doc.Reqs)
 
 			} else { // default to HTML
 				css, err := ioutil.ReadFile("style.css")
@@ -145,8 +220,9 @@ func main() {
 				}
 
 				cssRender(css)
-				toTable(doc.Controllers, doc.Reqs)
-				toTable(doc.Models, doc.Reqs)
+				toHTMLTable("Controllers", doc.Controllers, doc.Reqs)
+				toHTMLTable("Models", doc.Models, doc.Reqs)
+				toHTMLTable("Views", doc.Views, doc.Reqs)
 			}
 		}
 	}

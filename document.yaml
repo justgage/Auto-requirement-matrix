@@ -1,4 +1,135 @@
 ---
+Controllers:
+
+- name: Location Controller
+  description:
+  reqirements:
+   - TUT-010
+
+- name: Announcements Controller
+  description: 
+  reqirements:
+   - TUT-003
+
+- name: Tutor Controller
+  description: 
+  reqirements:
+   - TUT-001
+   - TUT-013
+
+- name: Review Controller
+  description: 
+  reqirements:
+   - TUT-015
+
+- name: Appointments Controller
+  description: 
+  reqirements:
+   - TUT-002
+   - TUT-005
+   - TUT-006
+   - TUT-008
+   - TUT-009
+   - TUT-011
+   #- TUT-014
+   - TUT-016
+   - TUT-017
+   - TUT-018
+   - STU-006
+
+- name: Video Controller
+  description: 
+  reqirements:
+   - TUT-019
+
+- name: Materials Controller
+  description: 
+  reqirements:
+   - TUT-017
+
+- name: Course Controller
+  description: 
+  reqirements:
+
+
+- name: Student Controller
+  description: 
+  reqirements:
+   - TUT-012
+   - STU-001
+
+- name: Admin Controller
+  description:
+  reqirements:
+
+- name: Jenabar Adapter
+  description: ""
+  reqirements:
+   - STU-001
+   - STU-004
+   - TUT-012
+
+- name: Notification Library
+  description: 
+  reqirements:
+
+#############################
+#          VIEWS            #
+#############################
+
+Views:
+- name: LocationJS
+  description:
+  reqirements:
+
+#############################
+#          MODELS           #
+#############################
+
+Models:
+
+- name: Location Model
+  description:
+  reqirements:
+
+- name: Announcements Model
+  description: 
+  reqirements:
+
+- name: Tutor Model
+  description: 
+  reqirements:
+
+- name: Review Model
+  description: 
+  reqirements:
+
+- name: Appointments Model
+  description: 
+  reqirements:
+   - STU-001
+
+- name: Video Model
+  description: 
+  reqirements:
+
+- name: Materials Model
+  description: 
+  reqirements:
+
+- name: Course Model
+  description: 
+  reqirements:
+
+- name: Admin Model
+  description:
+  reqirements:
+
+- name: Student Model
+  description:
+  reqirements:
+   - STU-001
+
 Reqirements: 
 - ALL-001
 - ALL-002
@@ -81,127 +212,3 @@ Reqirements:
 - SYS-012
 - SYS-013
 - SYS-014
-
-Controllers:
-
-
-- name: Location Controller
-  description:
-  reqirements:
-   - TUT-010
-
-- name: Announcements Controller
-  description: 
-  reqirements:
-   - TUT-003
-
-- name: Tutor Controller
-  description: 
-  reqirements:
-   - TUT-001
-   - TUT-013
-
-- name: Review Controller
-  description: 
-  reqirements:
-   - TUT-015
-
-- name: Appointments Controller
-  description: 
-  reqirements:
-   - TUT-002
-   - TUT-005
-   - TUT-006
-   - TUT-008
-   - TUT-009
-   - TUT-011
-   #- TUT-014
-   - TUT-016
-   - TUT-017
-   - TUT-018
-   - STU-006
-
-- name: Video Controller
-  description: 
-  reqirements:
-   - TUT-019
-
-- name: Materials Controller
-  description: 
-  reqirements:
-   - TUT-017
-
-- name: Course Controller
-  description: 
-  reqirements:
-
-
-- name: Student Controller
-  description: 
-  reqirements:
-   - TUT-012
-   - STU-001
-
-- name: Admin Controller
-  description:
-  reqirements:
-
-- name: Jenabar Adapter
-  description: ""
-  reqirements:
-   - STU-001
-   - STU-004
-   - TUT-012
-
-- name: Notification Library
-  description: 
-  reqirements:
-
-#############################
-#          MODELS           #
-#############################
-
-Models:
-
-- name: Location Model
-  description:
-  reqirements:
-
-
-- name: Announcements Model
-  description: 
-  reqirements:
-
-- name: Tutor Model
-  description: 
-  reqirements:
-
-- name: Review Model
-  description: 
-  reqirements:
-
-- name: Appointments Model
-  description: 
-  reqirements:
-   - STU-001
-
-- name: Video Model
-  description: 
-  reqirements:
-
-- name: Materials Model
-  description: 
-  reqirements:
-
-- name: Course Model
-  description: 
-  reqirements:
-
-- name: Admin Model
-  description:
-  reqirements:
-
-- name: Student Model
-  description:
-  reqirements:
-   - STU-001
