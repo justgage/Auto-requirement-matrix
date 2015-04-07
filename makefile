@@ -12,3 +12,5 @@ view:
 watch:
 	watch make
 
+images:
+	pdftoppm -png index.pdf matrix

@@ -384,368 +384,449 @@ Requirements:
 
    # All Users
 
-   ALL-001:
-     description: "Users shall be able to view available tutoring appointments by course.  "
-     rationale: "This functionality allows a user to find tutoring appointments specific to a course without manually searching through all tutoring appointments.  "
+-  
+   name: ALL-001
+   description: "Users shall be able to view available tutoring appointments by course.  "
+   rationale: "This functionality allows a user to find tutoring appointments specific to a course without manually searching through all tutoring appointments.  "
 
-   ALL-002:
-     description: "Users shall be able to view available tutoring appointments on the system calendar.  "
-     rationale: "Users need to be able to see which tutoring appointments are being offered to make decisions about when to sign up, when to offer more or less tutoring appointments, or other uses.  "
+-  
+   name: ALL-002
+   description: "Users shall be able to view available tutoring appointments on the system calendar.  "
+   rationale: "Users need to be able to see which tutoring appointments are being offered to make decisions about when to sign up, when to offer more or less tutoring appointments, or other uses.  "
 
    # TUTORS
 
-   TUT-001:
-     description: "Tutors shall be able to CRUD tutoring appointments.  "
-     rationale: "A tutor needs the ability to specify the times they are available to tutor so a student can sign up for a tutoring appointment during those times.  "
+-  
+   name: TUT-001
+   description: "Tutors shall be able to CRUD tutoring appointments.  "
+   rationale: "A tutor needs the ability to specify the times they are available to tutor so a student can sign up for a tutoring appointment during those times.  "
 
-   TUT-002:
-     description: "Tutors shall be able to record the appointment status of tutoring session.  "
-     rationale: "The tutor needs to specify the appointment status of the tutoring session for reporting purposes.  "
+-  
+   name: TUT-002
+   description: "Tutors shall be able to record the appointment status of tutoring session.  "
+   rationale: "The tutor needs to specify the appointment status of the tutoring session for reporting purposes.  "
 
-   TUT-003:
-     description: "Tutors shall be able to opt-out of being notified regarding tutoring appointment changes.  "
-     rationale: "The tutors may not want to be notified of tutoring appointment changes.  See STU-013 and SYS-006."
-
-
-   TUT-004:
-     description: "Tutors shall be able to view announcements from their admins.  "
-     rationale: "Admins often send announcements to tutors. Tutors should be able to view these announcements. See ADM-003."
-
-   TUT-005:
-     description: "Tutors shall be able to add students to tutoring appointments.  "
-     rationale: "Tutors need to be able to change which students signed up for the tutoring appointment.  "
-
-   TUT-006:
-     description: "Tutors shall be able to remove students from the tutoring appointments.  "
-     rationale: "Tutors need to be able to change which students signed up for the tutoring appointment.  "
-
-   TUT-007:
-     description: "Tutors shall be able to set a tutoring appointment to recur.  "
-     rationale: "Tutors will need to easily set appointments that recur at the same given time.  "
-
-   TUT-008:
-     description: "Tutors shall be able to set a tutoring appointment as a group tutoring appointment.  "
-     rationale: "Not all tutoring appointments are one-on-one. Tutors need the ability to allow multiple people to come to a single tutoring appointment.  "
-
-   TUT-009:
-     description: "Tutors shall be able to limit the number of students that can sign-up for a group tutoring appointment.  "
-     rationale: "Group tutoring appointment efficiency is worse when the tutors are outnumbered by the students.  Tutors may have the need to limit the number of students that can sign-up for a group tutoring appointment to address this concern.  See STU-006 and STU-025."
+-  
+   name: TUT-003
+   description: "Tutors shall be able to opt-out of being notified regarding tutoring appointment changes.  "
+   rationale: "The tutors may not want to be notified of tutoring appointment changes.  See STU-013 and SYS-006."
 
 
-   TUT-010:
-     description: "Tutors shall be able to specify the location of a tutoring appointment.  "
-     rationale: "Each location have different resources needed for a tutoring session. Tutors need to pick the correct location to meet the location needs.  "
+-  
+   name: TUT-004
+   description: "Tutors shall be able to view announcements from their admins.  "
+   rationale: "Admins often send announcements to tutors. Tutors should be able to view these announcements. See ADM-003."
 
-   TUT-011:
-     description: "Tutors will have the ability to view previous tutoring sessions.  "
-     rationale: "Viewing details of past tutoring sessions, both completed and canceled, helps the tutor keep track of work accomplished. This ability aids tutors in logging the correct amount of time worked.  "
+-  
+   name: TUT-005
+   description: "Tutors shall be able to add students to tutoring appointments.  "
+   rationale: "Tutors need to be able to change which students signed up for the tutoring appointment.  "
 
-   TUT-012:
-     description: "Tutors shall have the ability to view the student profile of those who have scheduled tutoring appointments.  "
-     rationale: "Tutors need a way to contact the student in order to communicate with them regarding scheduled tutoring appointments.  See SYS-003."
+-  
+   name: TUT-006
+   description: "Tutors shall be able to remove students from the tutoring appointments.  "
+   rationale: "Tutors need to be able to change which students signed up for the tutoring appointment.  "
 
+-  
+   name: TUT-007
+   description: "Tutors shall be able to set a tutoring appointment to recur.  "
+   rationale: "Tutors will need to easily set appointments that recur at the same given time.  "
 
-   TUT-013:
-     description: "Tutors shall be able to specify the course(s) they are available to tutor for any given tutoring appointment.  "
-     rationale: "Tutors can set up tutoring appointments based on the specific course(s) they are qualified to tutor. See STU-024."
+-  
+   name: TUT-008
+   description: "Tutors shall be able to set a tutoring appointment as a group tutoring appointment.  "
+   rationale: "Not all tutoring appointments are one-on-one. Tutors need the ability to allow multiple people to come to a single tutoring appointment.  "
 
-
-   TUT-014:
-     description: "Tutors shall have the ability to edit their contact information within their tutor profile.  "
-     rationale: "Tutors often times prefer contact via phone. This allows them the option of providing/updating their contact information.  "
-
-   TUT-015:
-     description: "Tutors shall be able to view feedback given for a tutoring session.  "
-     rationale: "The tutor needs to view feedback in order to improve performance as a tutor. See STU-019."
-
-
-   TUT-016:
-     description: "Tutors shall be able to view additional instructions attached to a tutoring appointment.  "
-     rationale: "The student may need to notify the tutor of the specific circumstances regarding the tutoring appointment.  "
-
-   TUT-017:
-     description: "Tutors shall be able to view additional material attached to a tutoring appointment.  "
-     rationale: "Some students will want to provide documents regarding what the tutoring appointment will be covering. This will help the tutor prepare ahead of time for the specific topic. See STU-016."
+-  
+   name: TUT-009
+   description: "Tutors shall be able to limit the number of students that can sign-up for a group tutoring appointment.  "
+   rationale: "Group tutoring appointment efficiency is worse when the tutors are outnumbered by the students.  Tutors may have the need to limit the number of students that can sign-up for a group tutoring appointment to address this concern.  See STU-006 and STU-025."
 
 
-   TUT-018:
-     description: "Tutors shall be able to set a registration restriction."  
-     rationale: "Tutors need to know in advance if they are going to hold a tutoring session.  "
+-  
+   name: TUT-010
+   description: "Tutors shall be able to specify the location of a tutoring appointment.  "
+   rationale: "Each location have different resources needed for a tutoring session. Tutors need to pick the correct location to meet the location needs.  "
 
-   TUT-019:
-     description: "Tutors shall be able to view learning videos that admins have made available.  "
-     rationale: "Learning videos are constantly being added and updated. Tutors need a way to view these learning videos. See ADM-016."
+-  
+   name: TUT-011
+   description: "Tutors will have the ability to view previous tutoring sessions.  "
+   rationale: "Viewing details of past tutoring sessions, both completed and canceled, helps the tutor keep track of work accomplished. This ability aids tutors in logging the correct amount of time worked.  "
 
-
-   TUT-020:
-     description: "Tutors shall have access to all the functionality of a student.  "
-     rationale: "Tutors need the capability to use TutorTrac 2.0 as both a tutor and a student."
-
-   STU-001:
-     description: "Students shall be able to view available tutoring appointments for their current course(s).  "
-     rationale: "Students need to view all available tutoring appointments before they can sign up for one. Students should not see tutoring appointments for courses in which they are not enrolled.  "
-
-   STU-002:
-     description: "Students shall be able to filter tutoring appointments by tutor name.  "
-     rationale: "Students may wish to work with the same tutor multiple times. To do this, students need the ability to find tutoring appointments for specific tutors.  "
-
-   STU-003:
-     description: "Students shall be able to view the TutorTrac 2.0 system calendar.  "
-     rationale: "Students need to see a system calendar to plan tutoring appointments that do not conflict with their schedule.  "
-
-   STU-004:
-     description: "Students shall be able to view tutor profiles.  "
-     rationale: "Students need to view basic information about the tutors before they schedule a tutoring appointment so that they can find the tutor that is best suited to instruct them.  "
-
-   STU-005:
-     description: "Students shall be able to sign up for tutoring appointments that apply to a course in which they are enrolled.  "
-     rationale: "Once a student finds an available time slot that also fits his/her schedule, the student will be able to select that time slot to set up a tutoring appointment. This functionality is present for the courses in which student is enrolled.  "
-
-   STU-006:
-     description: "Students shall be able to see the max number of students in a given group tutoring appointment.  "
-     rationale: "Size of group tutoring appointments can determine whether or not students want to sign up for it. See TUT-009."
+-  
+   name: TUT-012
+   description: "Tutors shall have the ability to view the student profile of those who have scheduled tutoring appointments.  "
+   rationale: "Tutors need a way to contact the student in order to communicate with them regarding scheduled tutoring appointments.  See SYS-003."
 
 
-   STU-007:
-     description: "Students shall be able to sign up for tutoring appointments in learning resource centers.  "
-     rationale: "There are centers that offer tutoring sessions that are applicable to all students.  These centers have no course enrollment requirements for the available tutoring appointments.  "
-
-   STU-008:
-     description: "Students will be able to request a tutoring appointment if an appointment is not available at a given time.  "
-     rationale: "Allowing students to request tutoring appointments that are not available will help admins know which times need more tutors.  "
-
-   STU-009:
-     description: "Students shall be able to view tutoring appointments for which they have signed up.  "
-     rationale: "Students need this functionality as a reference to help remind them of tutoring appointments.  "
-
-   STU-010:
-     description: "Students shall be able to cancel tutoring appointments they have scheduled before registration restriction."
-     rationale: "Students need the ability to cancel tutoring appointments if they can no longer attend.  "
-
-   STU-011:
-     description: "Students shall be notified of tutoring appointment changes.  "
-     rationale: "Students need to be notified of tutoring appointment changes so they can plan accordingly to avoid missing a tutoring appointment.  "
-
-   STU-012:
-     description: "Students will be able to view tutoring appointments by location.  "
-     rationale: "Students may want a convenient location for a tutor appointment.  "
-
-   STU-013:
-     description: "Students shall be able to opt-out of being notified regarding changes to tutoring appointments.  "
-     rationale: "Some students may not want to be notified concerning their tutoring appointments.  See TUT-003 and SYS-005."
+-  
+   name: TUT-013
+   description: "Tutors shall be able to specify the course(s) they are available to tutor for any given tutoring appointment.  "
+   rationale: "Tutors can set up tutoring appointments based on the specific course(s) they are qualified to tutor. See STU-024."
 
 
-   STU-014:
-     description: "Students shall be able to add additional instructions to a tutoring appointment.  "
-     rationale: "The student should be able to disclose information about what they are working on, what they are struggling with, or their standing in the course section.  This will benefit the student because the information will help the tutor understand what they need work on during the tutoring appointment.  See STU-015."
+-  
+   name: TUT-014
+   description: "Tutors shall have the ability to edit their contact information within their tutor profile.  "
+   rationale: "Tutors often times prefer contact via phone. This allows them the option of providing/updating their contact information.  "
+
+-  
+   name: TUT-015
+   description: "Tutors shall be able to view feedback given for a tutoring session.  "
+   rationale: "The tutor needs to view feedback in order to improve performance as a tutor. See STU-019."
 
 
-   STU-015:
-     description: "Students shall be able to change the additional instructions which are attached to the tutoring appointment.  "
-     rationale: "Students may change what they want to go over with a tutor by changing or modifying the additional instruction. See STU-014."
+-  
+   name: TUT-016
+   description: "Tutors shall be able to view additional instructions attached to a tutoring appointment.  "
+   rationale: "The student may need to notify the tutor of the specific circumstances regarding the tutoring appointment.  "
+
+-  
+   name: TUT-017
+   description: "Tutors shall be able to view additional material attached to a tutoring appointment.  "
+   rationale: "Some students will want to provide documents regarding what the tutoring appointment will be covering. This will help the tutor prepare ahead of time for the specific topic. See STU-016."
 
 
-   STU-016:
-     description: "Students shall be able to attach additional material to tutoring appointments.  "
-     rationale: "The student should be able to provide the tutor with additional material relevant to their course section. This will help the tutor better his tutoring session with the student. See TUT-017 and STU-017."
+-  
+   name: TUT-018
+   description: "Tutors shall be able to set a registration restriction."  
+   rationale: "Tutors need to know in advance if they are going to hold a tutoring session.  "
+
+-  
+   name: TUT-019
+   description: "Tutors shall be able to view learning videos that admins have made available.  "
+   rationale: "Learning videos are constantly being added and updated. Tutors need a way to view these learning videos. See ADM-016."
 
 
-   STU-017:
-     description: "Students shall be able to make changes to the existing additional material.  "
-     rationale: "Students may include incorrect documents when posting additional material.  Therefore they need to be able to modify the additional material to reflect their actual needs. See TUT-017 and STU-016."
+-  
+   name: TUT-020
+   description: "Tutors shall have access to all the functionality of a student.  "
+   rationale: "Tutors need the capability to use TutorTrac 2.0 as both a tutor and a student."
+
+-  
+   name: STU-001
+   description: "Students shall be able to view available tutoring appointments for their current course(s).  "
+   rationale: "Students need to view all available tutoring appointments before they can sign up for one. Students should not see tutoring appointments for courses in which they are not enrolled.  "
+
+-  
+   name: STU-002
+   description: "Students shall be able to filter tutoring appointments by tutor name.  "
+   rationale: "Students may wish to work with the same tutor multiple times. To do this, students need the ability to find tutoring appointments for specific tutors.  "
+
+-  
+   name: STU-003
+   description: "Students shall be able to view the TutorTrac 2.0 system calendar.  "
+   rationale: "Students need to see a system calendar to plan tutoring appointments that do not conflict with their schedule.  "
+
+-  
+   name: STU-004
+   description: "Students shall be able to view tutor profiles.  "
+   rationale: "Students need to view basic information about the tutors before they schedule a tutoring appointment so that they can find the tutor that is best suited to instruct them.  "
+
+-  
+   name: STU-005
+   description: "Students shall be able to sign up for tutoring appointments that apply to a course in which they are enrolled.  "
+   rationale: "Once a student finds an available time slot that also fits his/her schedule, the student will be able to select that time slot to set up a tutoring appointment. This functionality is present for the courses in which student is enrolled.  "
+
+-  
+   name: STU-006
+   description: "Students shall be able to see the max number of students in a given group tutoring appointment.  "
+   rationale: "Size of group tutoring appointments can determine whether or not students want to sign up for it. See TUT-009."
 
 
-   STU-018:
-     description: "Students will be able to schedule recurring tutoring appointments with the same tutor.  "
-     rationale: "Students may want to have regular tutoring sessions with a tutor who is familiar with their needs.  "
+-  
+   name: STU-007
+   description: "Students shall be able to sign up for tutoring appointments in learning resource centers.  "
+   rationale: "There are centers that offer tutoring sessions that are applicable to all students.  These centers have no course enrollment requirements for the available tutoring appointments.  "
 
-   STU-019:
-     description: "Students shall be able to submit feedback about the tutoring session.  "
-     rationale: "The student should be able to give feedback about the tutoring session so the tutors can understand what they did well and what they can improve. See TUT-015."
+-  
+   name: STU-008
+   description: "Students will be able to request a tutoring appointment if an appointment is not available at a given time.  "
+   rationale: "Allowing students to request tutoring appointments that are not available will help admins know which times need more tutors.  "
+
+-  
+   name: STU-009
+   description: "Students shall be able to view tutoring appointments for which they have signed up.  "
+   rationale: "Students need this functionality as a reference to help remind them of tutoring appointments.  "
+
+-  
+   name: STU-010
+   description: "Students shall be able to cancel tutoring appointments they have scheduled before registration restriction."
+   rationale: "Students need the ability to cancel tutoring appointments if they can no longer attend.  "
+
+-  
+   name: STU-011
+   description: "Students shall be notified of tutoring appointment changes.  "
+   rationale: "Students need to be notified of tutoring appointment changes so they can plan accordingly to avoid missing a tutoring appointment.  "
+
+-  
+   name: STU-012
+   description: "Students will be able to view tutoring appointments by location.  "
+   rationale: "Students may want a convenient location for a tutor appointment.  "
+
+-  
+   name: STU-013
+   description: "Students shall be able to opt-out of being notified regarding changes to tutoring appointments.  "
+   rationale: "Some students may not want to be notified concerning their tutoring appointments.  See TUT-003 and SYS-005."
 
 
-   STU-020:
-     description: "Students shall be able to view a history of tutoring sessions they have taken part of in the past.  "
-     rationale: "A student may want to reconnect with a previous tutor.  "
-
-   STU-021:
-     description: "Students shall be able to view learning videos for their course(s).  "
-     rationale: "Learning videos contain answers to commonly asked questions for times when speaking to a tutor is impossible (online students). See ADM-016."
+-  
+   name: STU-014
+   description: "Students shall be able to add additional instructions to a tutoring appointment.  "
+   rationale: "The student should be able to disclose information about what they are working on, what they are struggling with, or their standing in the course section.  This will benefit the student because the information will help the tutor understand what they need work on during the tutoring appointment.  See STU-015."
 
 
-   STU-022:
-     description: "Students will be able to CRUD study group appointments for a specific course.  "
-     rationale: "Sometimes students would like to meet among themselves to better understand the material. Students who create these study group appointments need the ability to view, delete, or change them.  "
-
-   STU-023:
-     description: "Students will be able to sign up for a study group appointment.  "
-     rationale: "Sometimes students would like to meet among themselves to better understand the material.  "
-
-   STU-024:
-     description: "Students shall be able to specify the course they wish to be tutored in when signing up for a tutoring appointment.  "
-     rationale: "Tutors need to know what course to prepare for in the scheduled tutoring appointment. See TUT-013."
+-  
+   name: STU-015
+   description: "Students shall be able to change the additional instructions which are attached to the tutoring appointment.  "
+   rationale: "Students may change what they want to go over with a tutor by changing or modifying the additional instruction. See STU-014."
 
 
-   STU-025:
-     description: "Students shall be able to view the number of students currently signed up for a given group tutoring appointment.  "
-     rationale: "Students may want to attend a group tutoring appointment as a group. To ensure there is enough room in the group tutoring appointment they need to see how many others are signed up. See TUT-009."
+-  
+   name: STU-016
+   description: "Students shall be able to attach additional material to tutoring appointments.  "
+   rationale: "The student should be able to provide the tutor with additional material relevant to their course section. This will help the tutor better his tutoring session with the student. See TUT-017 and STU-017."
+
+
+-  
+   name: STU-017
+   description: "Students shall be able to make changes to the existing additional material.  "
+   rationale: "Students may include incorrect documents when posting additional material.  Therefore they need to be able to modify the additional material to reflect their actual needs. See TUT-017 and STU-016."
+
+
+-  
+   name: STU-018
+   description: "Students will be able to schedule recurring tutoring appointments with the same tutor.  "
+   rationale: "Students may want to have regular tutoring sessions with a tutor who is familiar with their needs.  "
+
+-  
+   name: STU-019
+   description: "Students shall be able to submit feedback about the tutoring session.  "
+   rationale: "The student should be able to give feedback about the tutoring session so the tutors can understand what they did well and what they can improve. See TUT-015."
+
+
+-  
+   name: STU-020
+   description: "Students shall be able to view a history of tutoring sessions they have taken part of in the past.  "
+   rationale: "A student may want to reconnect with a previous tutor.  "
+
+-  
+   name: STU-021
+   description: "Students shall be able to view learning videos for their course(s).  "
+   rationale: "Learning videos contain answers to commonly asked questions for times when speaking to a tutor is impossible (online students). See ADM-016."
+
+
+-  
+   name: STU-022
+   description: "Students will be able to CRUD study group appointments for a specific course.  "
+   rationale: "Sometimes students would like to meet among themselves to better understand the material. Students who create these study group appointments need the ability to view, delete, or change them.  "
+
+-  
+   name: STU-023
+   description: "Students will be able to sign up for a study group appointment.  "
+   rationale: "Sometimes students would like to meet among themselves to better understand the material.  "
+
+-  
+   name: STU-024
+   description: "Students shall be able to specify the course they wish to be tutored in when signing up for a tutoring appointment.  "
+   rationale: "Tutors need to know what course to prepare for in the scheduled tutoring appointment. See TUT-013."
+
+
+-  
+   name: STU-025
+   description: "Students shall be able to view the number of students currently signed up for a given group tutoring appointment.  "
+   rationale: "Students may want to attend a group tutoring appointment as a group. To ensure there is enough room in the group tutoring appointment they need to see how many others are signed up. See TUT-009."
 
 
 
    # Admin
 
-   ADM-001:
-     description: "Admins shall be able to assign tutor privileges to students.  "
-     rationale: "Admins need to grant tutor privileges to new employees in order for these employees to use TutorTrac 2.0 as a tutor.  "
+-  
+   name: ADM-001
+   description: "Admins shall be able to assign tutor privileges to students.  "
+   rationale: "Admins need to grant tutor privileges to new employees in order for these employees to use TutorTrac 2.0 as a tutor.  "
 
-   ADM-002:
-     description: "Admins shall be able to remove tutor privileges from a student.  "
-     rationale: "Admins need to revoke tutor privileges from former tutor employees.  "
+-  
+   name: ADM-002
+   description: "Admins shall be able to remove tutor privileges from a student.  "
+   rationale: "Admins need to revoke tutor privileges from former tutor employees.  "
 
-   ADM-003:
-     description: "Admins shall be able to send announcements to tutors.  "
-     rationale: "Admins need the ability to share information with tutors in a convenient way. See TUT-004."
-
-
-   ADM-004:
-     description: "Admins shall be able to view performance reports.  "
-     rationale: "Admins need to be able to view performance reports to measure the performance and patterns of a tutoring center, tutor, or student. See SYS-010."
+-  
+   name: ADM-003
+   description: "Admins shall be able to send announcements to tutors.  "
+   rationale: "Admins need the ability to share information with tutors in a convenient way. See TUT-004."
 
 
-   ADM-005:
-     description: "Admin shall be able to set a global limit number of hours each tutor is allowed to work per week.  "
-     rationale: "School policy limits the maximum number of hours each tutor is allowed to work. TutorTrac 2.0 needs to enforce this policy to help tutoring centers meet their business needs. See SYS-011."
+-  
+   name: ADM-004
+   description: "Admins shall be able to view performance reports.  "
+   rationale: "Admins need to be able to view performance reports to measure the performance and patterns of a tutoring center, tutor, or student. See SYS-010."
 
 
-   ADM-006:
-     description: "Admins shall be able to view feedback given to each tutor.  "
-     rationale: "Admins need to be able to review the performance of the tutors to identify areas of improvement. See STU-019."
+-  
+   name: ADM-005
+   description: "Admin shall be able to set a global limit number of hours each tutor is allowed to work per week.  "
+   rationale: "School policy limits the maximum number of hours each tutor is allowed to work. TutorTrac 2.0 needs to enforce this policy to help tutoring centers meet their business needs. See SYS-011."
 
 
-   ADM-007:
-     description: "Admins shall be able to CRUD tutoring centers.  "
-     rationale: "Admins need to be able to manage tutoring centers within TutorTrac 2.0.  "
-
-   ADM-008:
-     description: "Admins shall be able to associate courses with a tutoring center.  "
-     rationale: "Certain courses are associated with certain tutoring centers. Admins need to be able to match these courses to the appropriate tutoring centers.  "
-
-   ADM-009:
-     description: "Admins shall be able to associate a tutor with specific tutoring center(s).  "
-     rationale: "Tutors are associated with the tutoring center where they will work. In order for admins to organize tutors within TutorTrac 2.0 this functionality is necessary.  "
-
-   ADM-010:
-     description: "Admins may be able to associate a tutor with one or more instructors for a specified course section.  "
-     rationale: "Tutors may need specific knowledge about a course section taught by a specific instructor in order to be an effective tutor for that course.  "
-
-   ADM-011:
-     description: "Admins shall be able to create drop-in appointments associated with a tutoring center.  "
-     rationale: "Some tutoring centers (i.e. Math Study Center) use drop-in appointments.  "
-
-   ADM-012:
-     description: "Admins shall be able to associate a tutor with a course.  "
-     rationale: "A tutor needs to be associated with the courses for which they were hired to tutor.  "
-
-   ADM-013:
-     description: "Admins shall be able to view tutor profiles.  "
-     rationale: "Admins need the ability to review the information contained in these profiles.  "
-
-   ADM-014:
-     description: "Admins shall be able to set an individual tutor’s maximum number of scheduled hours, overriding the global limit.  "
-     rationale: "To meet budgets, individual tutoring centers may need to limit the number of hours their tutors work below the global limit. See ADM-005."
+-  
+   name: ADM-006
+   description: "Admins shall be able to view feedback given to each tutor.  "
+   rationale: "Admins need to be able to review the performance of the tutors to identify areas of improvement. See STU-019."
 
 
-   ADM-015:
-     description: "Admins shall be able to impersonate other users in TutorTrac 2.0.  "
-     rationale: "Admins need to be able to use TutorTrac 2.0 as a tutor or student for testing and review purposes.  "
+-  
+   name: ADM-007
+   description: "Admins shall be able to CRUD tutoring centers.  "
+   rationale: "Admins need to be able to manage tutoring centers within TutorTrac 2.0.  "
 
-   ADM-016:
-     description: "Admins shall be able to CRUD learning videos in TutorTrac 2.0.  "
-     rationale: "Admins need to create and moderate learning videos. This is to facilitate tutoring for online students. See STU-021."
+-  
+   name: ADM-008
+   description: "Admins shall be able to associate courses with a tutoring center.  "
+   rationale: "Certain courses are associated with certain tutoring centers. Admins need to be able to match these courses to the appropriate tutoring centers.  "
+
+-  
+   name: ADM-009
+   description: "Admins shall be able to associate a tutor with specific tutoring center(s).  "
+   rationale: "Tutors are associated with the tutoring center where they will work. In order for admins to organize tutors within TutorTrac 2.0 this functionality is necessary.  "
+
+-  
+   name: ADM-010
+   description: "Admins may be able to associate a tutor with one or more instructors for a specified course section.  "
+   rationale: "Tutors may need specific knowledge about a course section taught by a specific instructor in order to be an effective tutor for that course.  "
+
+-  
+   name: ADM-011
+   description: "Admins shall be able to create drop-in appointments associated with a tutoring center.  "
+   rationale: "Some tutoring centers (i.e. Math Study Center) use drop-in appointments.  "
+
+-  
+   name: ADM-012
+   description: "Admins shall be able to associate a tutor with a course.  "
+   rationale: "A tutor needs to be associated with the courses for which they were hired to tutor.  "
+
+-  
+   name: ADM-013
+   description: "Admins shall be able to view tutor profiles.  "
+   rationale: "Admins need the ability to review the information contained in these profiles.  "
+
+-  
+   name: ADM-014
+   description: "Admins shall be able to set an individual tutor’s maximum number of scheduled hours, overriding the global limit.  "
+   rationale: "To meet budgets, individual tutoring centers may need to limit the number of hours their tutors work below the global limit. See ADM-005."
 
 
-   ADM-017:
-     description: "Admins shall be able to CRUD locations.  "
-     rationale: "Admins need to manage locations associated with each tutoring center. Different tutoring centers utilize different areas of BYU-Idaho.  "
+-  
+   name: ADM-015
+   description: "Admins shall be able to impersonate other users in TutorTrac 2.0.  "
+   rationale: "Admins need to be able to use TutorTrac 2.0 as a tutor or student for testing and review purposes.  "
 
-   ADM-018:
-     description: "Admins shall be able to restrict tutors from creating tutoring appointments on specified days.  "
-     rationale: "Admins need the ability to prevent tutoring appointments from being scheduled on days when the BYU-Idaho campus is closed.  "
+-  
+   name: ADM-016
+   description: "Admins shall be able to CRUD learning videos in TutorTrac 2.0.  "
+   rationale: "Admins need to create and moderate learning videos. This is to facilitate tutoring for online students. See STU-021."
 
-   ADM-019:
-     description: "Admins shall be able to CRUD tutors’ schedules.  "
-     rationale: "Tutoring centers need the option to coordinate their tutors’ schedules.  "
 
-   ADM-020:
-     description: "Admins shall be able to CRUD individuals not currently enrolled at BYU-Idaho to tutoring appointments.  "
-     rationale: "Tutoring centers can offer their services to non-BYU-Idaho students, such as children, teenagers, and spouses of students."
+-  
+   name: ADM-017
+   description: "Admins shall be able to CRUD locations.  "
+   rationale: "Admins need to manage locations associated with each tutoring center. Different tutoring centers utilize different areas of BYU-Idaho.  "
+
+-  
+   name: ADM-018
+   description: "Admins shall be able to restrict tutors from creating tutoring appointments on specified days.  "
+   rationale: "Admins need the ability to prevent tutoring appointments from being scheduled on days when the BYU-Idaho campus is closed.  "
+
+-  
+   name: ADM-019
+   description: "Admins shall be able to CRUD tutors’ schedules.  "
+   rationale: "Tutoring centers need the option to coordinate their tutors’ schedules.  "
+
+-  
+   name: ADM-020
+   description: "Admins shall be able to CRUD individuals not currently enrolled at BYU-Idaho to tutoring appointments.  "
+   rationale: "Tutoring centers can offer their services to non-BYU-Idaho students, such as children, teenagers, and spouses of students."
 
 
 
 
    # SYSTEM
 
-   SYS-001:
-     description: "TutorTrac 2.0 shall be functional in modern internet browsers.  "
-     rationale: "Users at BYU-Idaho use a variety of different web browsers to access the internet. All users need to have access to TutorTrac 2.0.  "
+-  
+   name: SYS-001
+   description: "TutorTrac 2.0 shall be functional in modern internet browsers.  "
+   rationale: "Users at BYU-Idaho use a variety of different web browsers to access the internet. All users need to have access to TutorTrac 2.0.  "
 
-   SYS-002:
-     description: "TutorTrac 2.0 shall prevent any user from signing up for two (or more) tutoring appointments in the same time slot.  "
-     rationale: "It is impossible for students to attend two (or more) separate appointments at the same time. TutorTrac 2.0 must prevent this from happening.  "
+-  
+   name: SYS-002
+   description: "TutorTrac 2.0 shall prevent any user from signing up for two (or more) tutoring appointments in the same time slot.  "
+   rationale: "It is impossible for students to attend two (or more) separate appointments at the same time. TutorTrac 2.0 must prevent this from happening.  "
 
-   SYS-003:
-     description: "TutorTrac 2.0 shall be able to retrieve student profile information.  "
-     rationale: "All students have a profile linked to the Active Directory. TutorTrac 2.0 needs to be able to access the information in that profile to fill in appropriate information in TutorTrac 2.0.  "
+-  
+   name: SYS-003
+   description: "TutorTrac 2.0 shall be able to retrieve student profile information.  "
+   rationale: "All students have a profile linked to the Active Directory. TutorTrac 2.0 needs to be able to access the information in that profile to fill in appropriate information in TutorTrac 2.0.  "
 
-   SYS-004:
-     description: "TutorTrac 2.0 shall authenticate users through CAS.  "
-     rationale: "All BYU-Idaho students already have a username and password for university sites and applications. TutorTrac 2.0 needs to be able to accept this form of authentication.  "
+-  
+   name: SYS-004
+   description: "TutorTrac 2.0 shall authenticate users through CAS.  "
+   rationale: "All BYU-Idaho students already have a username and password for university sites and applications. TutorTrac 2.0 needs to be able to accept this form of authentication.  "
 
-   SYS-005:
-     description: "TutorTrac 2.0 shall notify students when a tutoring appointment has changed.  "
-     rationale: "Students need to be informed of any changes so that tutoring appointments are not missed.  The fastest method of notification is if TutorTrac 2.0 automatically notifies the students.  See STU-013."
+-  
+   name: SYS-005
+   description: "TutorTrac 2.0 shall notify students when a tutoring appointment has changed.  "
+   rationale: "Students need to be informed of any changes so that tutoring appointments are not missed.  The fastest method of notification is if TutorTrac 2.0 automatically notifies the students.  See STU-013."
 
-   SYS-006:
-     description: "TutorTrac 2.0 shall notify tutors when a tutoring appointment has changed.  "
-     rationale: "Tutors need to be informed of any changes so that tutoring appointments are not missed. The fastest method of notification is if TutorTrac 2.0 automatically notifies the tutors. See TUT-003."
-
-
-   SYS-007:
-     description: "TutorTrac 2.0 shall display tutoring appointment availability for each course.  "
-     rationale: "Students need to know how many tutoring appointments are available in TutorTrac 2.0.  "
-
-   SYS-008:
-     description: "TutorTrac 2.0 shall allow students to check-in and check-out of centers that allow drop-in appointments without previously having a tutoring appointment.  "
-     rationale: "Tutors can have drop-in appointments without the student needing to sign up beforehand. TutorTrac 2.0 needs to allow for this flexibility so tutors can still be paid for a tutoring appointment.  "
-
-   SYS-009:
-     description: "TutorTrac 2.0 shall log all key metrics.  "
-     rationale: "Key metrics need to be recorded in order to be used in the generation of performance reports. See SYS-010."
+-  
+   name: SYS-006
+   description: "TutorTrac 2.0 shall notify tutors when a tutoring appointment has changed.  "
+   rationale: "Tutors need to be informed of any changes so that tutoring appointments are not missed. The fastest method of notification is if TutorTrac 2.0 automatically notifies the tutors. See TUT-003."
 
 
-   SYS-010:
-     description: "TutorTrac 2.0 shall use key metrics to generate performance reports.  "
-     rationale: "Performance reports are used by BYU-Idaho in order to view how tutoring centers are used. See SYS-009."
+-  
+   name: SYS-007
+   description: "TutorTrac 2.0 shall display tutoring appointment availability for each course.  "
+   rationale: "Students need to know how many tutoring appointments are available in TutorTrac 2.0.  "
+
+-  
+   name: SYS-008
+   description: "TutorTrac 2.0 shall allow students to check-in and check-out of centers that allow drop-in appointments without previously having a tutoring appointment.  "
+   rationale: "Tutors can have drop-in appointments without the student needing to sign up beforehand. TutorTrac 2.0 needs to allow for this flexibility so tutors can still be paid for a tutoring appointment.  "
+
+-  
+   name: SYS-009
+   description: "TutorTrac 2.0 shall log all key metrics.  "
+   rationale: "Key metrics need to be recorded in order to be used in the generation of performance reports. See SYS-010."
 
 
-   SYS-011:
-     description: "TutorTrac 2.0 shall limit the maximum number of hours a tutor can schedule during a week (maximum determined by admin).  "
-     rationale: "Tutoring centers have business needs tied to weekly maximum student employee hours. TutorTrac 2.0 will save time by making sure no tutor has signed up for more than the allotted hours. See ADM-005."
+-  
+   name: SYS-010
+   description: "TutorTrac 2.0 shall use key metrics to generate performance reports.  "
+   rationale: "Performance reports are used by BYU-Idaho in order to view how tutoring centers are used. See SYS-009."
 
 
-   SYS-012:
-     description: "TutorTrac 2.0 shall store learning videos related to a course.  "
-     rationale: "This is meant to be a student resource that helps them to get help with specific topics related to a course. See TUT-019, STU-021, and ADM-016."
+-  
+   name: SYS-011
+   description: "TutorTrac 2.0 shall limit the maximum number of hours a tutor can schedule during a week (maximum determined by admin).  "
+   rationale: "Tutoring centers have business needs tied to weekly maximum student employee hours. TutorTrac 2.0 will save time by making sure no tutor has signed up for more than the allotted hours. See ADM-005."
 
 
-   SYS-013:
-     description: "TutorTrac 2.0 shall store learning videos related to a specific topic.  "
-     rationale: "This is meant to be a student resource that helps them to get help with specific topics. See TUT-019, STU-021, and ADM-016."
+-  
+   name: SYS-012
+   description: "TutorTrac 2.0 shall store learning videos related to a course.  "
+   rationale: "This is meant to be a student resource that helps them to get help with specific topics related to a course. See TUT-019, STU-021, and ADM-016."
 
 
-   SYS-014:
-      description: "TutorTrac 2.0 shall store tutoring appointment information."
-      rationale: "TutorTrac 2.0 needs to be able to save created appointment information so students can sign up for appointments. It also needs this information for performance reports."
+-  
+   name: SYS-013
+   description: "TutorTrac 2.0 shall store learning videos related to a specific topic.  "
+   rationale: "This is meant to be a student resource that helps them to get help with specific topics. See TUT-019, STU-021, and ADM-016."
+
+
+-  
+   name: SYS-014
+   description: "TutorTrac 2.0 shall store tutoring appointment information."
+   rationale: "TutorTrac 2.0 needs to be able to save created appointment information so students can sign up for appointments. It also needs this information for performance reports."
 
 
 
