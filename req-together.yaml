@@ -34,12 +34,14 @@ Controllers:
 #     - TUT-003
 
 - name: SuperController
+  description: 
   requirements: 
    - TUT-020
    - ADM-015
    - SYS-004
 
 - name: AppointmentController
+  description: 
   requirements: 
    - ALL-001
    - STU-005
@@ -64,12 +66,14 @@ Controllers:
    - TUT-018
 
 - name: AdminController
+  description: 
   requirements: 
    - ADM-015
    - ADM-019
 
 
 - name: CourseController
+  description: 
   requirements: 
    - ALL-001
    - TUT-013
@@ -79,6 +83,7 @@ Controllers:
    - SYS-007
 
 - name: JenzabarAdapter
+  description: 
   requirements: 
   - TUT-012
   - STU-004
@@ -86,16 +91,19 @@ Controllers:
   - SYS-003
 
 - name: LocationController
+  description: ""
   requirements: 
   - TUT-010
   - ADM-017
 
 - name: ReportController
+  description: ""
   requirements: 
   - ADM-004
   - SYS-010
 
 - name: TutorController
+  description: ""
   requirements: 
   - TUT-013
   - TUT-014
@@ -110,16 +118,19 @@ Controllers:
   - SYS-011
 
 - name: ReviewController
+  description: ""
   requirements: 
   - ADM-006
   - STU-019
   - TUT-015
  
 - name: BlackoutController
+  description: ""
   requirements: 
   - ADM-018
 
 - name: CenterController
+  description: ""
   requirements: 
   - STU-007
   - ADM-005
@@ -128,6 +139,7 @@ Controllers:
   - SYS-011
 
 - name: LearningVideoController
+  description: ""
   requirements: 
   - TUT-019
   - STU-021
@@ -136,12 +148,14 @@ Controllers:
   - SYS-013
 
 - name: MaterialsController
+  description: ""
   requirements: 
   - TUT-017
   - STU-016
   - STU-017
 
 - name: NotificationController
+  description: ""
   requirements: 
   - ADM-003
   - STU-008
@@ -151,6 +165,7 @@ Controllers:
   - TUT-004
 
 - name: StudentController
+  description: ""
   requirements: 
   - TUT-012
   - STU-013
@@ -159,9 +174,9 @@ Controllers:
 #############################
 #          VIEWS            #
 #############################
-Views: 
 
 - name: TutorJS
+  description: 
   requirements: 
    - TUT-003
    - TUT-013
@@ -169,7 +184,10 @@ Views:
    - STU-004
 
 - name: CalendarJS
+  description: 
   requirements: 
+   - TUT-011
+   - TUT-020
    - STU-001
    - STU-002
    - STU-003
@@ -185,6 +203,7 @@ Views:
    - TUT-020
 
 - name: AppointmentJS
+  description: 
   requirements: 
   - TUT-001
   - TUT-002
@@ -213,6 +232,7 @@ Views:
   - SYS-009
 
 - name: StudentJS
+  description: 
   requirements: 
    - ALL-002
    - STU-004
@@ -222,6 +242,7 @@ Views:
    - STU-016
 
 - name: AdminTutorJS
+  description: 
   requirements: 
    - ADM-001
    - ADM-002
@@ -231,22 +252,27 @@ Views:
    - ADM-006
 
 - name: AdminCentersJS
+  description: 
   requirements: 
 
 - name: AdminCenterDetailsJS
+  description: 
   requirements: 
    - ADM-005
    - ADM-008
 
 - name: AdminSettingsJS
+  description: 
   requirements: 
   - ADM-018
 
 - name: AnnouncementsJS
+  description: 
   requirements: 
   - ADM-003
 
 - name: ReportMakerJS
+  description: 
   requirements: 
   - ADM-004
   - ADM-011
@@ -255,6 +281,7 @@ Views:
   
 
 - name: AdminVideosJS
+  description: 
   requirements: 
   - ADM-016
   - TUT-019
@@ -264,20 +291,22 @@ Views:
 #         Models            #
 #############################
 
-Models: 
 
 - name: AdditionalMaterialsModel
+  description: ""
   requirements: 
   - TUT-017
   - STU-016
   - STU-017
 
 - name: LocationModel
+  description: ""
   requirements: 
   - TUT-010
   - ADM-017
 
 - name: TutorModel
+  description: ""
   requirements: 
   - TUT-013
   - TUT-014
@@ -292,6 +321,7 @@ Models:
   - SYS-011
 
 - name: TutoringCenterModel
+  description: ""
   requirements: 
   - STU-007
   - ADM-005
@@ -299,12 +329,14 @@ Models:
   - ADM-008
 
 - name: ReviewModel
+  description: ""
   requirements: 
   - TUT-015
   - STU-019
   - ADM-006
 
 - name: AppointmentsModel
+  description: ""
   requirements: 
   - TUT-001
   - TUT-002
@@ -331,10 +363,12 @@ Models:
   - SYS-002
 
 - name: AdminModel
+  description: ""
   requirements: 
   - ADM-015
 
 - name: LearningVideoModel
+  description: ""
   requirements: 
   - TUT-019
   - STU-021
@@ -343,21 +377,26 @@ Models:
   - SYS-013
 
 - name: MaterialsModel
+  description: ""
   requirements: []
 
 - name: CourseModel
+  description: ""
   requirements: []
 
 - name: BlackoutModel
+  description: ""
   requirements: 
   - ADM-018
 
 - name: UserModel
+  description: ""
   requirements: 
   - TUT-012
   - TUT-014
 
 - name: StudentModel
+  description: ""
   requirements: 
   - TUT-012
   - STU-001

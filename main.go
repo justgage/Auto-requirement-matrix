@@ -8,7 +8,7 @@ import (
 	"sort"
 )
 
-const DEV = true
+const DEV = false
 const n = 37
 
 type DesignEntity struct {
