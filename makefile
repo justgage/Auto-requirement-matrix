@@ -1,16 +1,17 @@
 main: html markdown csv
 html: it
-	./reqirement-matrix new-req.yaml html > index.html 
+	./reqirement-matrix req.yaml html > index.html 
 markdown: it
-	./reqirement-matrix new-req.yaml markdown > reqirements.md 
+	./reqirement-matrix req.yaml markdown > reqirements.md 
 csv: it
-	./reqirement-matrix new-req.yaml csv > reqirements.csv 
+	./reqirement-matrix req.yaml csv > reqirements.csv 
 it:
 	go build
 view:
 	chromium index.html
 watch:
 	watch make
-
-images:
-	pdftoppm -png index.pdf matrix
+image:
+	rm images/*.png
+	pdftoppm -png index.pdf images/matrix
+	convert -trim images/*.png 

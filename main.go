@@ -121,7 +121,7 @@ This will convert a slice of design to an HTML Table
 */
 func toHTMLTable(title string, entitys []DesignEntity, reqs []map[string]string) {
 
-	fmt.Println("<h2>" + title + "<h2>")
+	// fmt.Println("<h2>" + title + "</h2>")
 
 	makeHeader(false, entitys)
 
